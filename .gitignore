@@ -1,0 +1,45 @@
+# Dependencies
+node_modules/
+package-lock.json.bak
+
+# Build output
+dist/
+build/
+*.tsbuildinfo
+
+# FFmpeg binaries (downloaded locally, not versioned)
+tools/
+
+# Local data (database, generated media) - never versioned
+data/db/
+data/temp/
+data/renders/
+data/videos/
+data/projects/*.json
+!data/projects/.gitkeep
+data/**/*.mp4
+data/**/*.db
+data/**/*.sqlite
+
+# Imported user assets (kept locally only)
+data/characters/imported/
+data/scenarios/imported/
+
+# Env / secrets
+.env
+.env.local
+.env.*.local
+
+# Editor / OS
+.vscode/*
+!.vscode/extensions.json
+.idea/
+Thumbs.db
+.DS_Store
+
+# Logs
+npm-debug.log*
+*.log
+
+# Test / coverage
+coverage/

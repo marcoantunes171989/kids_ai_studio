@@ -1,0 +1,27 @@
+{
+  "name": "kids-ai-studio",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Produtora de vídeos infantis educativos - desenvolvimento local com motor de animação 2D e exportação MP4 via FFmpeg",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:backend": "npm run dev -w apps/backend",
+    "dev:frontend": "npm run dev -w apps/frontend",
+    "build": "npm run build -w packages/engine && npm run build -w apps/backend && npm run build -w apps/frontend",
+    "test": "npm run test -w packages/engine && npm run test -w apps/backend",
+    "typecheck": "npm run typecheck -w packages/engine && npm run typecheck -w apps/backend && npm run typecheck -w apps/frontend",
+    "seed:demo": "npm run seed:demo -w apps/backend",
+    "render:demo": "npm run render:demo -w apps/backend"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "allowScripts": {
+    "sharp@0.33.5": true,
+    "esbuild@0.28.2": true,
+    "esbuild@0.21.5": true
+  }
+}
